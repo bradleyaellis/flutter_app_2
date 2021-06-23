@@ -1,22 +1,28 @@
-class Person {
-  int age = 31;
-  String name = "Bradley";
-}
-
-double addNumbers(double num1, double num2) {
-  // print(num1 + num2);
-  return num1 + num2;
-}
+import 'package:flutter/material.dart';
 
 void main() {
-  var person1 = Person();
-  var person2 = Person();
-  person2.name = 'Manu';
-  print(person2.name);
-  print(person1.name);
+  runApp(AppTwo());
+}
 
-  double firstResult = addNumbers(11, 3);
-  print(addNumbers(404, 1001));
-  print('Hello!');
-  print(firstResult);
+class AppTwo extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    var questions = [
+      'What\'s your favorite color?',
+      'What\'s your favorite animal?',
+    ];
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Second App'),
+        ),
+        body: Row(children: [
+          Text('the question'),
+          RaisedButton(child: Text('Press me! 1'), onPressed: null),
+          RaisedButton(child: Text('Press me! 2'), onPressed: null),
+          RaisedButton(child: Text('Press me! 3'), onPressed: null),
+        ]),
+      ),
+    );
+  }
 }
